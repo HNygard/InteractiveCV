@@ -62,14 +62,14 @@ $edu[] = array(
 
 
 /*  */
-$other = array();
-$other[] = array(
+$other1 = array();
+$other1[] = array(
 		'fromto'             => '2000 - 2010',
 		'title'              => 'No long',
 		'description_short'  => 'Abc oneliner',
 		'description_long'   => '',
 	);
-$other[] = array(
+$other1[] = array(
 		'fromto'             => '1998 - 2000',
 		'title'              => 'No short & long',
 		'description_short'  => '',
@@ -93,6 +93,22 @@ $other2[] = array(
 		'description_long'   => 'ABc123<br>alalal<br>aaa',
 	);
 
+
+
+/*  */
+$other3 = array();
+$other3[] = array(
+		'fromto'             => '2000 - 2010',
+		'title'              => 'No long',
+		'description_short'  => 'Abc oneliner',
+		'description_long'   => '',
+	);
+$other3[] = array(
+		'fromto'             => '1998 - 2000',
+		'title'              => 'No short & long',
+		'description_short'  => '',
+		'description_long'   => '',
+	);
 
 
 

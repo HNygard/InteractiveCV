@@ -19,15 +19,16 @@ $lang['is_printable']  = 'I denne interaktive CVen kan du vise mer eller mindre 
 	'f&aring; ut akkurat den valgte informasjonen.';
 $lang['read_more']     = 'Vis mer om denne';
 $lang['read_less']     = 'Vis mindre om denne';
-$lang['olderjobs_read_more']     = 'Vis mer om denne';
-$lang['olderjobs_read_less']     = 'Vis mindre om denne';
+$lang['olderjobs_read_more']     = 'Vis flere jobber og erfaringer (ikke så spennende)';
+$lang['olderjobs_read_less']     = 'Vis mindre jobber og erfaringer';
 $lang['contact_info_read_more']  = 'Vis mer';
 $lang['contact_info_read_less']  = 'Vis mindre';
 $lang['contact_info']  = 'Kontaktinformasjon';
 $lang['jobs']          = 'Jobb- og organisasjonserfaring';
 $lang['edu']           = 'Skolegang';
-$lang['other']         = 'Kurs';
-$lang['other2']        = 'Datakvalifikasjoner';
+$lang['other1']        = 'Dataprosjekt / -oppdrag';
+$lang['other2']        = 'Kurs';
+$lang['other3']        = 'Datakvalifikasjoner';
 $lang['languages']     = 'Spr&aring;k';
 
 $lang['footer']        = 'Denne CVen er skrevet ut fra http://cv.hnygard.no/';
@@ -174,11 +175,14 @@ echo 	'</span>'.
 echo '<h2>'.$lang['edu'].'</h2>'.chr(10);
 print_jobs($edu);
 
-echo '<h2>'.$lang['other'].'</h2>'.chr(10);
-print_jobs($other);
+echo '<h2>'.$lang['other1'].'</h2>'.chr(10);
+print_jobs($other1);
 
 echo '<h2>'.$lang['other2'].'</h2>'.chr(10);
 print_jobs($other2);
+
+echo '<h2>'.$lang['other3'].'</h2>'.chr(10);
+print_jobs($other3);
 
 echo '<h2>'.$lang['languages'].'</h2>'.chr(10);
 print_jobs($languages);
