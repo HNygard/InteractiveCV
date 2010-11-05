@@ -79,3 +79,21 @@ $other2[] = array(
 		'description_long'   => 'ABc123<br>alalal<br>aaa',
 	);
 
+
+
+
+/*  */
+$languages = array();
+$languages[] = array(
+		'fromto'             => 'English',
+		'title'              => 'weeeeeee',
+		'description_short'  => '',
+		'description_long'   => '',
+	);
+$languages[] = array(
+		'fromto'             => 'Norsk',
+		'title'              => 'Jlalalala',
+		'description_short'  => '',
+		'description_long'   => '',
+	);
+

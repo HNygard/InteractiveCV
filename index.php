@@ -28,6 +28,7 @@ $lang['jobs']          = 'Jobb- og organisasjonserfaring';
 $lang['edu']           = 'Skolegang';
 $lang['other']         = 'Kurs';
 $lang['other2']        = 'Datakvalifikasjoner';
+$lang['languages']     = 'Spr&aring;k';
 
 $lang['footer']        = 'Denne CVen er skrevet ut fra http://cv.hnygard.no/';
 
@@ -137,6 +138,9 @@ print_jobs($other);
 
 echo '<h2>'.$lang['other2'].'</h2>'.chr(10);
 print_jobs($other2);
+
+echo '<h2>'.$lang['languages'].'</h2>'.chr(10);
+print_jobs($languages);
 
 echo chr(10).chr(10).'<br /><br /><span class="footer">'.$lang['footer'].'</span>'.chr(10);
 
