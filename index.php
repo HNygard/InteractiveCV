@@ -19,10 +19,10 @@ $lang['is_printable']  = 'I denne interaktive CVen kan du vise mer eller mindre 
 	'f&aring; ut akkurat den valgte informasjonen.';
 $lang['read_more']     = 'Vis mer om denne';
 $lang['read_less']     = 'Vis mindre om denne';
-$lang['contact_info_'.
-	'read_more']     = 'Vis mer';
-$lang['contact_info_'.
-	'read_less']     = 'Vis mindre';
+$lang['olderjobs_read_more']     = 'Vis mer om denne';
+$lang['olderjobs_read_less']     = 'Vis mindre om denne';
+$lang['contact_info_read_more']  = 'Vis mer';
+$lang['contact_info_read_less']  = 'Vis mindre';
 $lang['contact_info']  = 'Kontaktinformasjon';
 $lang['jobs']          = 'Jobb- og organisasjonserfaring';
 $lang['edu']           = 'Skolegang';
@@ -157,6 +157,19 @@ echo '</div>'.chr(10).chr(10);
 
 echo '<h2>'.$lang['jobs'].'</h2>'.chr(10);
 print_jobs($jobs);
+
+echo '<div class="toggle">'.
+	'<span class="toggle screenonly">'.
+	'<span class="toggle_readmore">'.
+		$lang['olderjobs_read_more'].'</span>'.
+	'<span class="toggle_readless">'.
+		$lang['olderjobs_read_less'].'</span>'.
+	'<br /></span>'.
+	'<span class="toggle_text">';
+
+print_jobs($jobs_hidden);
+echo 	'</span>'.
+'</div>';
 
 echo '<h2>'.$lang['edu'].'</h2>'.chr(10);
 print_jobs($edu);
