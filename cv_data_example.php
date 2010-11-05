@@ -8,4 +8,10 @@ $jobs[] = array(
 		'description_short'  => 'Abc oneliner',
 		'description_long'   => 'ABc123<br>alalal<br>aaa',
 	);
+$jobs[] = array(
+		'fromto'             => '1998-2000',
+		'title'              => 'Jobb nr 2',
+		'description_short'  => 'Abc oneliner',
+		'description_long'   => 'ABc123<br>alalal<br>aaa',
+	);
 
