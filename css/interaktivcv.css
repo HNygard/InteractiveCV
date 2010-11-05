@@ -1,0 +1,30 @@
+div
+{
+	border: 1px solid black;
+}
+
+
+.fromto
+{
+	position:relative;
+	width: 150px;
+}
+
+.title
+{
+	position:relative;
+	left:175px;
+}
+
+.description_short
+{
+	position:relative;
+	left: 300px;
+}
+
+.description_long
+{
+	position:relative;
+	left: 300px;
+	top: 25px;
+}
