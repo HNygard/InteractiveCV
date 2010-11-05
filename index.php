@@ -1,4 +1,32 @@
-<html>
+<?php
+
+/* INTERACTIVE CV
+
+Mainly written on a train from Stavanger to Kristiansand without internetz
+
+Made by Hallvard Nygard <hallvard.nygard@gmail.com>
+
+*/
+
+/* TEXT STRINGS */
+// Can be translated...
+$lang = array();
+$lang['h1_screen']     = 'Interaktiv CV - Hallvard Nyg&aring;rd';
+$lang['h1_print']      = 'CV - Hallvard Nyg&aring;rd';
+$lang['is_printable']  = 'I denne interaktive CVen kan du vise mer eller mindre '.
+	'informasjon '.
+	'om ulike jobber og prosjekter. Hvis du s&aring; skriver den ut, s&aring; vil du '.
+	'f&aring; ut akkurat den valgte informasjonen.';
+$lang['read_more']     = 'Vis mer om denne';
+$lang['read_less']     = 'Vis mindre om denne';
+$lang['jobs']          = 'Jobb- og organisasjonserfaring';
+$lang['edu']           = 'Skolegang';
+$lang['other']         = 'Kurs';
+$lang['other2']        = 'Datakvalifikasjoner';
+
+$lang['footer']        = 'Denne CVen er skrevet ut fra http://cv.hnygard.no/';
+
+?><html>
 <head>
 	<title>Hallvard Nyg&aring;rd sin interaktive CV</title>
 	<link rel="stylesheet" type="text/css" href="css/interaktivcv.css" />
@@ -10,13 +38,18 @@
 
 <body>
 
-<h1 class="screenonly">Interaktiv CV - Hallvard Nyg&aring;rd</h1>
+<h1 class="screenonly"><?php echo $lang['h1_screen']; ?></h1>
 <h1 class="printonly">CV - Hallvard Nyg&aring;rd</h1>
+<div class="notice screenonly" style="width: 500px; font-size: 0.9em;">
+	<?php echo $lang['is_printable']; ?></div>
 
 <?php
 
 require 'cv_data.php';
 
+function print_jobs($jobs)
+{
+	global $lang;
 echo '<ul>'.chr(10).chr(10);
 foreach($jobs as $job)
 {
@@ -26,7 +59,11 @@ foreach($jobs as $job)
 		"\t\t".'<div class="titleandstuff">'.chr(10).
 		"\t\t\t".'<div class="title">'.$job['title'].'</div>'.chr(10).
 		"\t\t\t".'<div class="description_short">'.
-				$job['description_short'].'</div>'.chr(10).
+			$job['description_short'].'</div>'.chr(10).
+		"\t\t\t".'<div class="job_readmore">'.
+			'<span class="job_readmore">'.$lang['read_more'].'</span>'.
+			'<span class="job_readless">'.$lang['read_less'].'</span>'.
+		'</div>'.chr(10).
 		"\t\t</div>\n".
 		"\t</div>\n".
 		"\t".'<ul>'.chr(10).
@@ -37,6 +74,22 @@ foreach($jobs as $job)
 }
 
 echo '</ul>'.chr(10).chr(10);
+
+}
+
+echo '<h2>'.$lang['jobs'].'</h2>'.chr(10);
+print_jobs($jobs);
+
+echo '<h2>'.$lang['edu'].'</h2>'.chr(10);
+print_jobs($edu);
+
+echo '<h2>'.$lang['other'].'</h2>'.chr(10);
+print_jobs($other);
+
+echo '<h2>'.$lang['other2'].'</h2>'.chr(10);
+print_jobs($other2);
+
+echo chr(10).chr(10).'<br /><br /><span class="footer">'.$lang['footer'].'</span>'.chr(10);
 
 ?>
 

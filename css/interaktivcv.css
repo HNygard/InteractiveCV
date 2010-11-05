@@ -1,11 +1,63 @@
+body
+{
+	font-family: arial;
+}
+
 div, ul
 {
 	/*border: 1px solid black;*/
 }
 
+h2
+{
+	font-size: 1.2em;
+}
+
+.footer
+{
+	font-weight: italic;
+	font-size: 0.8em;
+}
+
+/* FROM CSS BLUEPRINT: */
+.error {
+	background:#FBE3E4 none repeat scroll 0 0;
+	border-color:#FBC2C4;
+	color:#8A1F11;
+}
+.error, .notice, .success {
+	border:2px solid #DDDDDD;
+	margin-bottom:1em;
+	padding:0.8em;
+}
+.notice {
+	background:#FFF6BF none repeat scroll 0 0;
+	border-color:#FFD324;
+	color:#514721;
+}
+.success {
+	background:#E6EFC2 none repeat scroll 0 0;
+	border-color:#C6D880;
+	color:#264409;
+}
+.success a {
+	//color:#264409;
+}
+.notice a {
+	//color:#514721;
+}
+.error a {
+	//color:#8A1F11;
+}
+.notice h2 {
+	color: red;
+}
+
+/* ### JOB RELATED ### */
 .job
 {
 	list-style-type:none;
+	height: 3.1 em;
 }
 .job ul
 {
@@ -15,37 +67,58 @@ div, ul
 }
 .job ul li
 {
-	padding: 10px;
 	list-style-type:none;
 	display:list-item;
 }
 
 .jobtitleandstuff
 {
-	height: 25px;
+	height: 4.1em;
 }
 
 .fromto
 {
 	font-weight:bold;
 	float: left;
-	height: 20px;
+	height: 40px;
 	width: 125px;
+}
+
+/* Title and stuff */
+.titleandstuff
+{
+	float: left;
+	height: 4em;
 }
 
 .title
 {
-	float: left;
-	height: 20px;
+	font-weight:bold;
 }
 
 .description_short
 {
-	float: left;
-	height: 20px;
 }
 
+div.job_readmore
+{
+	font-size: 0.8em;
+}
+
+span.job_readmore 
+{
+	display: none;
+}
+span.job_readmore, span.job_readless
+{
+	color:#D44314;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+/* Other fields */
 .description_long
 {
-	
+	margin-left: 125px;
+	margin-bottom: 25px;
 }

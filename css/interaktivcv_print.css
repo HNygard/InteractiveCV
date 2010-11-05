@@ -1,3 +1,8 @@
+/* PRINT CSS 
+
+Don't display the screen-elements
+
+*/
 
 h1.screenonly
 {
@@ -6,4 +11,9 @@ h1.screenonly
 h1.printonly
 {
 	/*display: none;*/
+}
+
+div.job_readmore
+{
+	display: none;
 }

@@ -1,7 +1,18 @@
 
+function toggle_description (something)
+{
+	$(something).
+		parent().parent().parent().
+	children('ul').children('.description_long').slideToggle();
+	$(something).children('span').toggle();
+}
 
 $(document).ready(function() {
-	$(".job").click(function() {
-		$(this).children('ul').children('.description_long').slideToggle();
+	$("div.job_readmore").click(function() {
+		toggle_description(this);
+	});
+	
+	$("div.job_readmore").each(function() {
+		toggle_description(this);
 	});
 });

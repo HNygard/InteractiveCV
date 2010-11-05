@@ -1,9 +1,14 @@
+/* SCREEN CSS 
 
-h1.screenonly
+Don't display the print-elements
+
+*/
+
+.screenonly
 {
 	/*display: none; */
 }
-h1.printonly
+.printonly
 {
 	display: none;
 }
