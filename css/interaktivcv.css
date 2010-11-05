@@ -1,30 +1,51 @@
-div
+div, ul
 {
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
+.job
+{
+	list-style-type:none;
+}
+.job ul
+{
+	padding: 0;
+	/*height: 5em;*/
+	display: inline-block;
+}
+.job ul li
+{
+	padding: 10px;
+	list-style-type:none;
+	display:list-item;
+}
+
+.jobtitleandstuff
+{
+	height: 25px;
+}
 
 .fromto
 {
-	position:relative;
-	width: 150px;
+	font-weight:bold;
+	float: left;
+	height: 20px;
+	width: 125px;
 }
 
 .title
 {
-	position:relative;
-	left:175px;
+	float: left;
+	height: 20px;
 }
 
 .description_short
 {
-	position:relative;
-	left: 300px;
+	float: left;
+	height: 20px;
 }
 
 .description_long
 {
-	position:relative;
-	left: 300px;
-	top: 25px;
+	
 }

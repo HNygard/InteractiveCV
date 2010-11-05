@@ -1,0 +1,9 @@
+
+h1.screenonly
+{
+	/*display: none; */
+}
+h1.printonly
+{
+	display: none;
+}
