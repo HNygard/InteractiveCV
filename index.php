@@ -20,9 +20,9 @@ $lang['is_printable']  = 'I denne interaktive CVen kan du vise mer eller mindre 
 $lang['read_more']     = 'Vis mer om denne';
 $lang['read_less']     = 'Vis mindre om denne';
 $lang['contact_info_'.
-	'read_more']     = 'Vis mer kontaktinformasjon og relaterte nettsider';
+	'read_more']     = 'Vis mer';
 $lang['contact_info_'.
-	'read_less']     = 'Vis mindre informasjon';
+	'read_less']     = 'Vis mindre';
 $lang['contact_info']  = 'Kontaktinformasjon';
 $lang['jobs']          = 'Jobb- og organisasjonserfaring';
 $lang['edu']           = 'Skolegang';
@@ -31,6 +31,34 @@ $lang['other2']        = 'Datakvalifikasjoner';
 $lang['languages']     = 'Spr&aring;k';
 
 $lang['footer']        = 'Denne CVen er skrevet ut fra http://cv.hnygard.no/';
+
+function htmllink ($url, $text)
+{
+	return
+		'<span class="screenonly">'.
+			'<a href="'.$url.'">'.$text.'</a>'.
+		'</span>'.
+		'<span class="printonly">'.
+			$text.': '.
+			'<span class="oneline">'.$url.'</span>'.
+		'</span>';
+}
+
+function htmltoggle ($text)
+{
+	global $lang;
+	
+	return
+		'<div class="toggle">'.
+			'<span class="toggle screenonly">'.
+			'<span class="toggle_readmore">'.
+				$lang['read_more'].'</span>'.
+			'<span class="toggle_readless">'.
+				$lang['read_less'].'</span>'.
+			'<br /></span>'.
+			'<span class="toggle_text">'.$text.'</span>'.
+		'</div>';
+}
 
 ?><html>
 <head>
@@ -119,8 +147,8 @@ echo '<div class="contact_info_columns">'.chr(10);
 echo '</div>'.chr(10).chr(10);
 
 echo '<div class="contact_readmore screenonly">'.
-	'<span class="contact_readmore">'.$lang['read_more'].'</span>'.
-	'<span class="contact_readless">'.$lang['read_less'].'</span>'.
+	'<span class="contact_readmore">'.$lang['contact_info_read_more'].'</span>'.
+	'<span class="contact_readless">'.$lang['contact_info_read_less'].'</span>'.
 '</div>'.chr(10);
 echo '<div class="contact_info_viewmore">'.chr(10);
 print_contact_info($contact_viewmore);

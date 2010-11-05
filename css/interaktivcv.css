@@ -8,15 +8,33 @@ div, ul
 	/*border: 1px solid black;*/
 }
 
+h1
+{
+	margin-bottom: 0;
+}
+
 h2
 {
 	font-size: 1.2em;
+	margin-bottom: 0;
 }
 
 .footer
 {
 	font-weight: italic;
 	font-size: 0.8em;
+}
+
+.oneline
+{
+	display: block;
+}
+
+span.contact_github
+{
+	left:100px;
+	position:absolute;
+	width:400px;
 }
 
 /* FROM CSS BLUEPRINT: */
@@ -68,20 +86,24 @@ h2
 .contact_info_columns
 {
 	height: 5em;
+	margin-bottom: 0;
 }
 .contact_info_col1, .contact_info_col2
 {
 	float: left;
+	width: 320px;
 }
 .contact_info_col2
 {
 	position: absolute;
-	left: 250px;
+	left: 320px;
+	width: 375px;
 }
 
 .contact_info_columns ul, .contact_info_viewmore ul
 {
 	padding: 0;
+	margin-top: 5px;
 }
 
 .contact_info_columns ul li, .contact_info_viewmore ul li
@@ -137,17 +159,25 @@ h2
 }
 
 /* READMORE/READLESS */
-div.job_readmore, div.contact_readmore
+div.job_readmore, div.contact_readmore,
+span.toggle
 {
 	font-size: 0.8em;
 }
+div.contact_readmore
+{
+	position:absolute;
+	left: 320px;
+}
 
-span.job_readmore, span.contact_readmore
+span.job_readmore, span.contact_readmore,
+span.toggle_readmore
 {
 	display: none;
 }
 span.job_readmore, span.job_readless,
-span.contact_readmore, span.contact_readless
+span.contact_readmore, span.contact_readless,
+span.toggle_readmore, span.toggle_readless
 {
 	color:#D44314;
 	text-decoration:none;
