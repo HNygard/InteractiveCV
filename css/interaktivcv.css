@@ -53,6 +53,42 @@ h2
 	color: red;
 }
 
+/* Contact information */
+.contact_info_heading
+{
+	font-weight: bold;
+}
+
+.contact_info_content
+{
+	position: absolute;
+	left: 95px;
+}
+
+.contact_info_columns
+{
+	height: 5em;
+}
+.contact_info_col1, .contact_info_col2
+{
+	float: left;
+}
+.contact_info_col2
+{
+	position: absolute;
+	left: 250px;
+}
+
+.contact_info_columns ul, .contact_info_viewmore ul
+{
+	padding: 0;
+}
+
+.contact_info_columns ul li, .contact_info_viewmore ul li
+{
+	list-style-type:none;
+}
+
 /* ### JOB RELATED ### */
 .job
 {
@@ -100,16 +136,18 @@ h2
 {
 }
 
-div.job_readmore
+/* READMORE/READLESS */
+div.job_readmore, div.contact_readmore
 {
 	font-size: 0.8em;
 }
 
-span.job_readmore 
+span.job_readmore, span.contact_readmore
 {
 	display: none;
 }
-span.job_readmore, span.job_readless
+span.job_readmore, span.job_readless,
+span.contact_readmore, span.contact_readless
 {
 	color:#D44314;
 	text-decoration:none;

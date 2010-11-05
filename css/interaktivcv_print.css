@@ -4,16 +4,11 @@ Don't display the screen-elements
 
 */
 
-h1.screenonly
+.screenonly
 {
 	display: none;
 }
-h1.printonly
+.printonly
 {
 	/*display: none;*/
-}
-
-div.job_readmore
-{
-	display: none;
 }

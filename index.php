@@ -19,6 +19,11 @@ $lang['is_printable']  = 'I denne interaktive CVen kan du vise mer eller mindre 
 	'f&aring; ut akkurat den valgte informasjonen.';
 $lang['read_more']     = 'Vis mer om denne';
 $lang['read_less']     = 'Vis mindre om denne';
+$lang['contact_info_'.
+	'read_more']     = 'Vis mer kontaktinformasjon og relaterte nettsider';
+$lang['contact_info_'.
+	'read_less']     = 'Vis mindre informasjon';
+$lang['contact_info']  = 'Kontaktinformasjon';
 $lang['jobs']          = 'Jobb- og organisasjonserfaring';
 $lang['edu']           = 'Skolegang';
 $lang['other']         = 'Kurs';
@@ -59,23 +64,67 @@ foreach($jobs as $job)
 		"\t\t".'<div class="titleandstuff">'.chr(10).
 		"\t\t\t".'<div class="title">'.$job['title'].'</div>'.chr(10).
 		"\t\t\t".'<div class="description_short">'.
-			$job['description_short'].'</div>'.chr(10).
-		"\t\t\t".'<div class="job_readmore">'.
-			'<span class="job_readmore">'.$lang['read_more'].'</span>'.
-			'<span class="job_readless">'.$lang['read_less'].'</span>'.
-		'</div>'.chr(10).
+			$job['description_short'].'</div>'.chr(10);
+		if($job['description_long'] != '')
+			echo "\t\t\t".'<div class="job_readmore screenonly">'.
+				'<span class="job_readmore">'.$lang['read_more'].'</span>'.
+				'<span class="job_readless">'.$lang['read_less'].'</span>'.
+			'</div>'.chr(10);
+		echo 
 		"\t\t</div>\n".
-		"\t</div>\n".
+		"\t</div>\n";
+		if($job['description_long'] != '')
+			echo 
 		"\t".'<ul>'.chr(10).
 		"\t\t".'<li class="description_long">'.
 				$job['description_long'].'</li>'.chr(10).
-		"\t</ul>\n".
-		'</li>'.chr(10).chr(10);
+		"\t</ul>\n";
+		
+		echo '</li>'.chr(10).chr(10);
 }
 
 echo '</ul>'.chr(10).chr(10);
 
 }
+
+function print_contact_info($array)
+{
+	echo '<ul>'.chr(10);
+	foreach($array as $info)
+	{
+		echo "\t<li>\n";
+		if($info[0] != '' || $info[1] != '')
+		{
+			echo "\t\t".'<span class="contact_info_heading">'.
+				$info[0].':</span> ';
+			echo "\t\t".'<span class="contact_info_content">'.
+				$info[1].'</span>';
+		}
+		else
+			echo '&nbsp;';
+		echo "\t</li>\n";
+	}
+	echo '</ul>'.chr(10).chr(10);
+}
+
+echo '<h2>'.$lang['contact_info'].'</h2>'.chr(10);
+echo '<div class="contact_info_columns">'.chr(10);
+	echo '<div class="contact_info_col1">'.chr(10);
+		print_contact_info($contact_col1);
+	echo '</div>'.chr(10);
+	echo '<div class="contact_info_col2">'.chr(10);
+		print_contact_info($contact_col2);
+	echo '</div>'.chr(10);
+echo '</div>'.chr(10).chr(10);
+
+echo '<div class="contact_readmore screenonly">'.
+	'<span class="contact_readmore">'.$lang['read_more'].'</span>'.
+	'<span class="contact_readless">'.$lang['read_less'].'</span>'.
+'</div>'.chr(10);
+echo '<div class="contact_info_viewmore">'.chr(10);
+print_contact_info($contact_viewmore);
+echo '</div>'.chr(10).chr(10);
+
 
 echo '<h2>'.$lang['jobs'].'</h2>'.chr(10);
 print_jobs($jobs);
