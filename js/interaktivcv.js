@@ -57,4 +57,7 @@ $(document).ready(function() {
 	$("div.contact_readmore").each(function() {
 		toggle_contact_viewmore(this);
 	});
+	
+	// Lightbox
+	$('a.lightbox').lightBox();
 });

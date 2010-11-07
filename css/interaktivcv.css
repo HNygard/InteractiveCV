@@ -37,6 +37,11 @@ span.contact_github
 	width:400px;
 }
 
+img
+{
+	border: 1px solid black;
+}
+
 /* FROM CSS BLUEPRINT: */
 .error {
 	background:#FBE3E4 none repeat scroll 0 0;

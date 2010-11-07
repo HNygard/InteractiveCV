@@ -61,14 +61,21 @@ function htmltoggle ($text)
 		'</div>';
 }
 
+function htmlimage ($img, $txt)
+{
+	return '<a href="'.$img.'" class="lightbox" title="'.$txt.'"><img src="'.$img.'" alt="'.$txt.'" height="200"></a><br />'.$txt;
+}
+
 ?><html>
 <head>
 	<title>Hallvard Nyg&aring;rd sin interaktive CV</title>
 	<link rel="stylesheet" type="text/css" href="css/interaktivcv.css" />
 	<link rel="stylesheet" type="text/css" href="css/interaktivcv_print.css" media="print" />
 	<link rel="stylesheet" type="text/css" href="css/interaktivcv_screen.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" />
 	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="js/interaktivcv.js"></script>
+	<script type="text/javascript" src="js/jquery.lightbox-0.5.min.js"></script>
 </head>
 
 <body>
