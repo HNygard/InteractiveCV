@@ -178,8 +178,8 @@ print_jobs($edu);
 echo '<h2>'.$lang['other1'].'</h2>'.chr(10);
 print_jobs($other1);
 
-echo '<h2>'.$lang['other2'].'</h2>'.chr(10);
-print_jobs($other2);
+//echo '<h2>'.$lang['other2'].'</h2>'.chr(10);
+//print_jobs($other2);
 
 echo '<h2>'.$lang['other3'].'</h2>'.chr(10);
 print_jobs($other3);
