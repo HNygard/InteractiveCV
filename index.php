@@ -63,7 +63,7 @@ function htmltoggle ($text)
 
 function htmlimage ($img, $txt)
 {
-	return '<a href="'.$img.'" class="lightbox" title="'.$txt.'"><img src="'.$img.'" alt="'.$txt.'" height="200"></a><br />'.$txt;
+	return '<a href="'.$img.'" class="lightbox" title="'.$txt.'"><img src="'.$img.'" alt="'.$txt.'" width="250"></a><br />'.$txt;
 }
 
 ?><html>
