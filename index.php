@@ -166,6 +166,7 @@ echo '</div>'.chr(10).chr(10);
 echo '<h2>'.$lang['jobs'].'</h2>'.chr(10);
 print_jobs($jobs);
 
+/*
 echo '<div class="toggle">'.
 	'<span class="toggle screenonly">'.
 	'<span class="toggle_readmore">'.
@@ -178,6 +179,7 @@ echo '<div class="toggle">'.
 print_jobs($jobs_hidden);
 echo 	'</span>'.
 '</div>';
+*/
 
 echo '<h2>'.$lang['edu'].'</h2>'.chr(10);
 print_jobs($edu);
