@@ -2,7 +2,7 @@
 
 /* INTERACTIVE CV
 
-Mainly written on a train from Stavanger to Kristiansand without internetz
+Mainly written on a train from Stavanger to Kristiansand without interwebz
 
 Made by Hallvard Nygard <hallvard.nygard@gmail.com>
 
