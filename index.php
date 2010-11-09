@@ -5,6 +5,9 @@
 Mainly written on a train from Stavanger to Kristiansand without interwebz
 
 Made by Hallvard Nygard <hallvard.nygard@gmail.com>
+Github: https://github.com/HNygard/InteractiveCV/
+
+License: Creative Commons Attribution-Share Alike 3.0 Norway License, http://creativecommons.org/licenses/by-sa/3.0/no/
 
 */
 
@@ -31,7 +34,7 @@ $lang['other2']        = 'Kurs';
 $lang['other3']        = 'Datakvalifikasjoner';
 $lang['languages']     = 'Spr&aring;k';
 
-$lang['footer']        = 'Denne CVen er skrevet ut fra http://cv.hnygard.no/';
+$lang['footer']        = 'Denne CVen er skrevet ut fra http://cv.hnygard.no/.<br />Kildekode til Interactive CV: https://github.com/HNygard/InteractiveCV/';
 
 function htmllink ($url, $text)
 {
@@ -201,5 +204,6 @@ echo chr(10).chr(10).'<br /><br /><span class="footer">'.$lang['footer'].'</span
 
 ?>
 
+<!-- https://github.com/HNygard/InteractiveCV/ -->
 </body>
 </html>
