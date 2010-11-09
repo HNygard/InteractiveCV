@@ -69,6 +69,9 @@ function htmlimage ($img, $txt)
 	return '<a href="'.$img.'" class="lightbox" title="'.$txt.'"><img src="'.$img.'" alt="'.$txt.'" width="250"></a><br />'.$txt;
 }
 
+
+require 'cv_data.php';
+
 ?><html>
 <head>
 	<title>Hallvard Nyg&aring;rd sin interaktive CV</title>
@@ -90,8 +93,6 @@ function htmlimage ($img, $txt)
 	<?php echo $lang['is_printable']; ?></div>
 
 <?php
-
-require 'cv_data.php';
 
 function print_jobs($jobs)
 {
