@@ -76,6 +76,7 @@ function htmlimage ($img, $txt)
 	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="js/interaktivcv.js"></script>
 	<script type="text/javascript" src="js/jquery.lightbox-0.5.min.js"></script>
+	<?php if(isset($script)) echo $script; ?>
 </head>
 
 <body>
